@@ -293,6 +293,12 @@ function nextsong(){
                 songplayed.play();
                 listofsongs_local[0].status="playing";
                 localStorage.setItem("listofsongs_local", JSON.stringify(listofsongs_local));
+                //Giving song name when we click on next
+                for(var ind1=0; ind1<listofsongs_local.length;ind1++){
+                    if(listofsongs_local[ind1].status==="playing"){
+                        document.getElementById("playedsongname").innerText=listofsongs_local[ind1].name;
+                    }
+                }
                 break;
             }
             else{
@@ -306,6 +312,12 @@ function nextsong(){
                 songplayed.play();
                 listofsongs_local[ind+1].status="playing";
                 localStorage.setItem("listofsongs_local", JSON.stringify(listofsongs_local));
+                //Giving song name when we click on next
+                for(var ind2=0; ind2<listofsongs_local.length;ind2++){
+                    if(listofsongs_local[ind2].status==="playing"){
+                        document.getElementById("playedsongname").innerText=listofsongs_local[ind2].name;
+                    }
+                }
                 break;
             }
         }
@@ -341,6 +353,12 @@ function previoussong(){
                 songplayed.play();
                 listofsongs_local[listofsongs_local.length-1].status="playing";
                 localStorage.setItem("listofsongs_local", JSON.stringify(listofsongs_local));
+              //Giving song name when we click on next
+                for(var ind3=0; ind3<listofsongs_local.length;ind3++){
+                    if(listofsongs_local[ind3].status==="playing"){
+                        document.getElementById("playedsongname").innerText=listofsongs_local[ind3].name;
+                    }
+                }
                 break;
             }
             else{
@@ -354,6 +372,12 @@ function previoussong(){
                 songplayed.play();
                 listofsongs_local[index-1].status="playing";
                 localStorage.setItem("listofsongs_local", JSON.stringify(listofsongs_local));
+                //Giving song name when we click on next
+                for(var ind4=0; ind4<listofsongs_local.length;ind4++){
+                    if(listofsongs_local[ind4].status==="playing"){
+                        document.getElementById("playedsongname").innerText=listofsongs_local[ind4].name;
+                    }
+                }
                 break;
             }
         }

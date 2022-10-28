@@ -190,6 +190,13 @@ function nextsong(){
                 songplayed.play();
                 favarr[0].status="playing";
                 localStorage.setItem("favarr", JSON.stringify(favarr));
+                var favarr=JSON.parse(localStorage.getItem("favarr"));
+                //Giving song name when we click on next
+                for(var ind1=0; ind1<favarr.length;ind1++){
+                    if(favarr[ind1].status==="playing"){
+                        document.getElementById("playedsongname").innerText=favarr[ind1].name;
+                    }
+                }
                 break;
             }
             else{
@@ -203,6 +210,13 @@ function nextsong(){
                 songplayed.play();
                 favarr[ind+1].status="playing";
                 localStorage.setItem("favarr", JSON.stringify(favarr));
+                var favarr=JSON.parse(localStorage.getItem("favarr"));
+                //Giving song name when we click on next
+                for(var ind1=0; ind1<favarr.length;ind1++){
+                    if(favarr[ind1].status==="playing"){
+                        document.getElementById("playedsongname").innerText=favarr[ind1].name;
+                    }
+                }
                 break;
             }
         }
@@ -238,6 +252,13 @@ function previoussong(){
                 songplayed.play();
                 favarr[favarr.length-1].status="playing";
                 localStorage.setItem("favarr", JSON.stringify(favarr));
+                var favarr=JSON.parse(localStorage.getItem("favarr"));
+                //Giving song name when we click on next
+                for(var ind1=0; ind1<favarr.length;ind1++){
+                    if(favarr[ind1].status==="playing"){
+                        document.getElementById("playedsongname").innerText=favarr[ind1].name;
+                    }
+                }
                 break;
             }
             else{
@@ -251,6 +272,13 @@ function previoussong(){
                 songplayed.play();
                 favarr[index-1].status="playing";
                 localStorage.setItem("favarr", JSON.stringify(favarr));
+                var favarr=JSON.parse(localStorage.getItem("favarr"));
+                //Giving song name when we click on next
+                for(var ind1=0; ind1<favarr.length;ind1++){
+                    if(favarr[ind1].status==="playing"){
+                        document.getElementById("playedsongname").innerText=favarr[ind1].name;
+                    }
+                }
                 break;
             }
         }
