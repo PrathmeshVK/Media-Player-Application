@@ -66,7 +66,7 @@ var listofsongs=[
     {
         name:"Jay Ganesh",
         path:"/Songs/song2.mp3",
-        song_icon:"/song_icons/song_icon10.png"
+        song_icon:"/song_icons/song_icon9.png"
         ,button: "fa-regular fa-3x fa-circle-play"
         ,favourites:"fa-solid fa-heart-circle-plus"
         ,status:"paused"
