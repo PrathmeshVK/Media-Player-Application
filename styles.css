@@ -1,0 +1,274 @@
+body{
+    background-color: rgb(212, 255, 255);
+}
+nav{
+    position: sticky;
+    top: 0;
+}
+#navbar{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 90%;
+    height: 100px;
+    background-color: black;
+    color:white;
+    list-style-type: none;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#navbar>div{
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+}
+#logo{
+    display: flex;
+    justify-content: space-between;
+    width: 9%;
+}
+#applogo{
+    height: 60px;
+}
+
+#parentcont{
+    display: flex;
+    /* justify-content: space-between; */
+    min-height: 68vh;
+    max-height: 70vh;
+    width: 90%;
+    display: flex;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    background-image: url('/backgroundImages/bgimg2.png');
+    background-position: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* #backgroundbanner{
+    width: 90%;
+    background-image: url('/backgroundImages/bgimg2.png');
+    z-index: 0;
+} */
+#backgroundbanner>h3{
+
+    color: rgb(31, 10, 50);
+}
+
+#songlist{
+    max-height:65vh;
+    overflow-y:scroll;
+    height: 95%;
+    width: 45%;
+    /* border: solid white 2px; */
+    margin: 10px;
+}
+
+#songlist::-webkit-scrollbar {
+    width: 0.5em;
+  }
+   
+  #songlist::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(61, 103, 195, 0.3);
+  }
+   
+  #songlist::-webkit-scrollbar-thumb {
+    background-color: rgba(188, 188, 212, 0.438);
+    outline:none;
+    border-radius:5px;
+  }
+
+
+
+#bottombar{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    background-color: black;
+    height: 90px;
+    width: 90%;
+    border-radius: 20px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    bottom: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#progressbar{
+    width: 70vw;
+}
+
+#icons{
+    margin-top: 15px;
+}
+#icons i{
+    cursor: pointer;
+}
+#songinfo{
+    display: flex;
+    width: 18%;
+    position:absolute;
+    left: 0vw;
+}
+
+
+#gif{
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+/* Playlist */
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    width: 95%;
+    margin: 5px;
+    border-radius: 30px;
+    height: 10vh;
+    border: 2px solid #0d1bff85;
+    color: rgb(0 201 255);
+    align-content: center;
+}
+
+#masterback, #masterplay, #masterfor{
+    color: rgb(0 201 255);
+}
+.item>p{
+    text-align: center;
+    margin: auto;
+}
+.item div:last-child{
+    margin: auto;
+}
+.song_icon{
+    height: 100%;
+    border-radius: 30px;
+}
+#playedsongname{
+    color: rgb(0 201 255);
+    margin-top: 32px;
+}
+
+#iconHolder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#fav{
+    margin-left:20px;
+    color: red;
+    cursor: pointer;
+}
+
+#btnfav{
+    text-decoration: none;
+    color: white;
+}
+#btnfav:hover{
+    transition: all .2s ease-in-out;
+    color: aqua;
+}
+#home{
+    color: aqua;
+    
+}
+.nameOfSong{
+    width: 50%;
+}
+#btn-sort{
+    position: absolute;
+    margin-left:43%;
+    margin-top: 15px;
+}
+#sort-btn{
+    background-color: rgb(2, 5, 20);
+    border-radius: 10px;
+    border: solid aqua 5px;
+    color: aqua;
+    cursor: pointer;
+}
+
+@media all and (max-width: 1100px) and (min-width:800px) {
+    #bottombar{
+        
+    }
+    #playedsongname{
+        font-size: small;
+    }
+    #gif{
+        height: 37px;
+        margin-top: 38px;
+    }
+    #songlist{
+        width: 55%;
+    } 
+    #btn-sort{
+        margin-left:52%
+    }
+
+  }
+
+  @media all and (max-width: 801px) and (min-width:600px) {
+    #bottombar{
+        
+    }
+    #playedsongname{
+        font-size: 15px;
+    }
+    #gif{
+        height: 37px;
+        margin-top: 38px;
+    }
+    #songlist{
+        width: 70%;
+    }
+    #btn-sort{
+        margin-left:65%
+    }
+    .nameOfSong{
+        font-size: 15px;
+    }
+  }
+
+  @media all and (max-width: 671px) and (min-width:200px) {
+    #bottombar{
+        
+    }
+    #playedsongname{
+        font-size: 10;
+    }
+    #gif{
+        height: 37px;
+        margin-top: 38px;
+    }
+    #songlist{
+        width: 72%;
+    }
+    #btn-sort{
+        margin-left:65%
+    }
+    #logo {
+        display: flex;
+        width: 14%;
+        flex-direction: column;
+    }
+    #logoname{margin-top: 5px;}
+    #parentcont{
+        display: flex;
+        flex-direction: column;
+    }
+    .nameOfSong{
+        font-size: 10px;
+    }
+  }
